@@ -290,7 +290,9 @@
             filterItems() {
                 const exclude = ["all", "availability", "price"]
                 if (!exclude.includes(this.criteria)) {
+                    // Search
                     return this.subjects.filter(x => x[this.criteria].toLowerCase().includes(this.searchInput.toLowerCase())).sort((a, b) => {
+                        // Sort
                         switch (this.order) {
                             case "ascending":
                                 if (a[this.criteria] > b[this.criteria]) {
