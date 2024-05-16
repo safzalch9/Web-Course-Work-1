@@ -214,6 +214,7 @@
         </div>
 </body>
 <script type="text/javascript">
+    // Initializing Vuejs
     var app = new Vue({
 
         el: "#app",
@@ -232,6 +233,7 @@
             subjects: subjects,
 
         },
+        // Functions
         methods: {
             addToCart(subject) {
                 subject.spaces--
@@ -254,6 +256,7 @@
                 this.order = order
             }
         },
+        // Automated Functions
         computed: {
             can_showSubjects() {
                 return this.showSubjects
@@ -282,7 +285,7 @@
                 }
             },
             ///////// VAlidation Form End///////////////////
-
+            
             filterItems() {
                 const exclude = ["all", "availability", "price"]
                 if (!exclude.includes(this.criteria)) {
